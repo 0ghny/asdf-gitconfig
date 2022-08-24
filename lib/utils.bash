@@ -2,10 +2,10 @@
 
 set -euo pipefail
 
-# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for gitconfigs.
-GH_REPO="https://github.com/0ghny/gitconfigs"
-TOOL_NAME="gitconfigs"
-TOOL_TEST="gitconfigs --help"
+# TODO: Ensure this is the correct GitHub homepage where releases can be downloaded for gitconfig.
+GH_REPO="https://github.com/0ghny/gitconfig"
+TOOL_NAME="gitconfig"
+TOOL_TEST="gitconfig --help"
 
 fail() {
   echo -e "asdf-$TOOL_NAME: $*"
@@ -14,7 +14,7 @@ fail() {
 
 curl_opts=(-fsSL)
 
-# NOTE: You might want to remove this if gitconfigs is not hosted on GitHub releases.
+# NOTE: You might want to remove this if gitconfig is not hosted on GitHub releases.
 if [ -n "${GITHUB_API_TOKEN:-}" ]; then
   curl_opts=("${curl_opts[@]}" -H "Authorization: token $GITHUB_API_TOKEN")
 fi
@@ -32,7 +32,7 @@ list_github_tags() {
 
 list_all_versions() {
   # TODO: Adapt this. By default we simply list the tag names from GitHub releases.
-  # Change this function if gitconfigs has other means of determining installable versions.
+  # Change this function if gitconfig has other means of determining installable versions.
   list_github_tags
 }
 
@@ -43,7 +43,7 @@ download_release() {
   version="$1"
   filename="$2"
 
-  # TODO: Adapt the release URL convention for gitconfigs
+  # TODO: Adapt the release URL convention for gitconfig
   url="$GH_REPO/releases/download/v${version}/${TOOL_NAME}_${version}_${platform}_${arch}.tar.gz"
 
   echo "* Downloading $TOOL_NAME release $version ${platform}/${arch}..."
@@ -89,9 +89,9 @@ get_platform() {
 
 get_arch() {
   local -r machine="$(uname -m)"
-  local -r tool_specific_arch_override="ASDF_GITCONFIGS_OVERWRITE_ARCH"
+  local -r tool_specific_arch_override="ASDF_gitconfig_OVERWRITE_ARCH"
 
-  OVERWRITE_ARCH=${!tool_specific_arch_override:-${ASDF_GITCONFIGS_OVERWRITE_ARCH:-"false"}}
+  OVERWRITE_ARCH=${!tool_specific_arch_override:-${ASDF_gitconfig_OVERWRITE_ARCH:-"false"}}
 
   if [[ ${OVERWRITE_ARCH} != "false" ]]; then
     echo "${OVERWRITE_ARCH}"

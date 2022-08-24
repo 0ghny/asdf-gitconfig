@@ -1,15 +1,15 @@
 <div align="center">
 
-# asdf-gitconfigs [![Build](https://github.com/0ghny/asdf-gitconfigs/actions/workflows/build.yml/badge.svg)](https://github.com/0ghny/asdf-gitconfigs/actions/workflows/build.yml) [![Lint](https://github.com/0ghny/asdf-gitconfigs/actions/workflows/lint.yml/badge.svg)](https://github.com/0ghny/asdf-gitconfigs/actions/workflows/lint.yml)
+# asdf-gitconfig [![Build](https://github.com/0ghny/asdf-gitconfig/actions/workflows/build.yml/badge.svg)](https://github.com/0ghny/asdf-gitconfig/actions/workflows/build.yml) [![Lint](https://github.com/0ghny/asdf-gitconfig/actions/workflows/lint.yml/badge.svg)](https://github.com/0ghny/asdf-gitconfig/actions/workflows/lint.yml)
 
 
-[gitconfigs](https://github.com/0ghny/gitconfigs) plugin for the [asdf version manager](https://asdf-vm.com).
+[gitconfig](https://github.com/0ghny/gitconfig) plugin for the [asdf version manager](https://asdf-vm.com).
 
 </div>
 
 # Contents
 
-- [asdf-gitconfigs  ](#asdf-gitconfigs--)
+- [asdf-gitconfig  ](#asdf-gitconfig--)
 - [Contents](#contents)
 - [Dependencies](#dependencies)
 - [Install](#install)
@@ -19,32 +19,32 @@
 # Dependencies
 
 - `bash`, `curl`, `tar`: generic POSIX utilities.
-- **Optional**: `ASDF_GITCONFIGS_OVERWRITE_ARCH` if present you can specify arch to download an specific one.
+- **Optional**: `ASDF_gitconfig_OVERWRITE_ARCH` if present you can specify arch to download an specific one.
 
 # Install
 
 Plugin:
 
 ```shell
-asdf plugin add gitconfigs
+asdf plugin add gitconfig
 # or
-asdf plugin add gitconfigs https://github.com/0ghny/asdf-gitconfigs.git
+asdf plugin add gitconfig https://github.com/0ghny/asdf-gitconfig.git
 ```
 
-gitconfigs:
+gitconfig:
 
 ```shell
 # Show all installable versions
-asdf list-all gitconfigs
+asdf list-all gitconfig
 
 # Install specific version
-asdf install gitconfigs latest
+asdf install gitconfig latest
 
 # Set a version globally (on your ~/.tool-versions file)
-asdf global gitconfigs latest
+asdf global gitconfig latest
 
-# Now gitconfigs commands are available
-gitconfigs --help
+# Now gitconfig commands are available
+gitconfig --help
 ```
 
 Check [asdf](https://github.com/asdf-vm/asdf) readme for more instructions on how to
@@ -54,7 +54,7 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/0ghny/asdf-gitconfigs/graphs/contributors)!
+[Thanks goes to these contributors](https://github.com/0ghny/asdf-gitconfig/graphs/contributors)!
 
 # License
 
